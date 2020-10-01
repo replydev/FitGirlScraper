@@ -1,4 +1,4 @@
-from telegram.ext import CommandHandler,Updater,CallbackQueryHandler
+from telegram.ext import CommandHandler,Updater,CallbackQueryHandler,InlineQueryHandler
 
 class Bot:
     def __init__(self,botToken):
@@ -9,6 +9,9 @@ class Bot:
 
     def add_callback(self,method):
         self.updater.dispatcher.add_handler(CallbackQueryHandler(method))
+    
+    def add_inline_query_handler(self,method):
+        self.updater.dispatcher.add_handler(InlineQueryHandler(method))
 
 
     def start(self):
