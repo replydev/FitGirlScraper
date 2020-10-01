@@ -40,8 +40,6 @@ def inline_query(update,context):
         count += 1
     update.inline_query.answer(results)
     
-
-
 def keyboard_markup(update,context):
     elements = search(get_string(context.args))
     if elements is None:

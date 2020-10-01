@@ -13,6 +13,5 @@ class Bot:
     def add_inline_query_handler(self,method):
         self.updater.dispatcher.add_handler(InlineQueryHandler(method))
 
-
     def start(self):
         self.updater.start_polling()

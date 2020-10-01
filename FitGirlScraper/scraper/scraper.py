@@ -3,7 +3,6 @@ from urllib import parse as url_parser
 import requests
 from FitGirlScraper.scraper.article import Article
 
-
 def get_html(url):
     r = requests.get(url)
     return r.content
@@ -13,11 +12,9 @@ def get_magnet(url):
     for li_soup in soup.find_all("a"):
         if str(li_soup['href']).startswith('magnet'):
             return li_soup['href']
-    
     return None
 
 class Scraper:
-
     def __init__(self,search_query):
         self.url = 'https://fitgirl-repacks.site/?s=' + url_parser.quote(search_query)
         self.elements = []
