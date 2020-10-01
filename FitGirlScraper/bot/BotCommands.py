@@ -22,6 +22,7 @@ def search(query):
 def inline_query(update,context):
     query = update.inline_query.query
     elements = search(query)
+    results = []
     if elements is None:
         results.append(InlineQueryResultArticle(
             id=uuid4(),
@@ -32,7 +33,6 @@ def inline_query(update,context):
         update.inline_query.answer(results)
         return
     count = 0
-    results = []
     for elements in elements:
         if count > config.KEYBOARD_RESULTS:
             break
