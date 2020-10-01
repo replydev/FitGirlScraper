@@ -15,3 +15,4 @@ class Bot:
 
     def start(self):
         self.updater.start_polling()
+        self.updater.idle()
