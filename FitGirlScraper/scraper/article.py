@@ -1,5 +1,5 @@
 class Article:
-    def __init__(self,title,link,magnet):
+    def __init__(self, title, link, magnet):
         self.title = title
         self.link = link
         self.magnet = magnet
