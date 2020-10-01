@@ -1,1 +1,2 @@
 BOT_TOKEN = 'token_here'
+KEYBOARD_RESULTS = 5
