@@ -3,7 +3,7 @@
 ## How to setup in a debian based system
 
 #### Install the python interpreter and git
-`sudo apt install python3 git`
+`sudo apt install python3 python3-pip git`
 
 `git clone https://codeberg.org/replydev/FitGirlScraper.git`
 
@@ -14,6 +14,9 @@
 `cd FitGirlScrapersource`
 
 `source bin/activate`
+
+#### Install requirements
+`pip install -r requirements.txt`
 
 #### Create your own config
 `cp config.py.example config.py`
